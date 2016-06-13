@@ -1,0 +1,4 @@
+script: 
+  - gym --use_legacy_build_api -o build/
+after_success:
+  - relution_upload -f build/*.ipa
