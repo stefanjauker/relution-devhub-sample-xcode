@@ -1,9 +1,4 @@
-install:
-  - echo "Install all required dependencies"
 script: 
-  - echo "Run the build script"
-  - echo "To build an iOS app you can use gym from fastlane. See https://github.com/fastlane/fastlane/tree/master/gym"
-  # - gym --use_legacy_build_api -o build/
+  - gym --use_legacy_build_api -o build/
 after_success:
-  - echo "Upload your build artifacts to Relution by using the relution_upload cli"
-  # - relution_upload -f build/*.ipa
+  - relution_upload -f build/*.ipa
